@@ -1,5 +1,4 @@
-import { evaluationSchema } from './types';
-import type { EvaluationStatus, Evaluation } from './types';
+import type {  Evaluation } from './types';
 import { formatDate } from '../../utils/formatDate';
 
 interface ListProps {
