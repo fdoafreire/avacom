@@ -3,6 +3,8 @@
 Aplicación para la gestión de evaluaciones de cursos.  
 SPA construida con **React 19 + TypeScript + Vite + Tailwind CSS v4**, con backend serverless en **AWS Lambda + API Gateway + DynamoDB** orquestado con **Serverless Framework v3**.
 
+🌐 **Desplegada en:** [https://main.d3d7aftzkw9uqg.amplifyapp.com/](https://main.d3d7aftzkw9uqg.amplifyapp.com/)
+
 ## Requisitos
 
 - Node.js 20.x
