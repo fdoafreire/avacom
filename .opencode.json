@@ -1,0 +1,15 @@
+{
+  "project": {
+    "name": "Avacom",
+    "type": "Serverless SPA"
+  },
+  "context": {
+    "include": [
+      "HARNESS.md"
+    ],
+    "exclude": [
+      "**/node_modules/**",
+      "**/.git/**"
+    ]
+  }
+}

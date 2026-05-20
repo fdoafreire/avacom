@@ -1,0 +1,49 @@
+service: evaluations-backend
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  stage: dev
+  httpApi:
+    cors: true 
+  environment:
+    DYNAMODB_TABLE: evaluations-table-dev
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+          Resource: "arn:aws:dynamodb:us-east-1:*:table/evaluations-table-dev"
+
+functions:
+  api:
+    handler: handler.api
+    events:
+      - httpApi: 'GET /evaluations'
+      - httpApi: 'GET /evaluations/{id}'
+      - httpApi: 'POST /evaluations'
+      - httpApi: 'PUT /evaluations/{id}'
+      - httpApi: 'DELETE /evaluations/{id}'
+
+resources:
+  Resources:
+    EvaluationsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: evaluations-table-dev
+        AttributeDefinitions:
+          - AttributeName: evaluationId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: evaluationId
+            KeyType: HASH
+        BillingMode: PROVISIONED
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
