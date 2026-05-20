@@ -1,4 +1,3 @@
-import React from 'react';
 import { evaluationSchema } from './types';
 import type { EvaluationStatus, Evaluation } from './types';
 import { formatDate } from '../../utils/formatDate';

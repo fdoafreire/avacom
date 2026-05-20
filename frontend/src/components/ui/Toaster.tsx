@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface ToasterProps {
   message: string;
   type: 'success' | 'error';

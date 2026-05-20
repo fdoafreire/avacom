@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Loading() {
   return (
     <div className="absolute inset-0 bg-white/60 backdrop-blur-xs z-50 flex flex-col justify-center items-center rounded-xl">
