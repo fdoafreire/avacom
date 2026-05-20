@@ -8,7 +8,7 @@ interface ListProps {
 }
 
 export default function List({ evaluations, onEdit, onDeleteTrigger }: ListProps) {
-  const statusBadges: Record<<Evaluation['status'], string> = {
+  const statusBadges: Record<Evaluation['status'], string> = {
     active: 'bg-emerald-50 text-emerald-700 border-emerald-200',
     completed: 'bg-blue-50 text-blue-700 border-blue-200',
     cancelled: 'bg-rose-50 text-rose-700 border-rose-200',
