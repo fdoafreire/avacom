@@ -1,4 +1,3 @@
-import React from 'react';
 import MainLayout from '../layouts/MainLayout';
 import EvaluationsPage from '../pages/evaluations/page';
 
